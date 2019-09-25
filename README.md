@@ -1,2 +1,2 @@
 # Git Notebook
-Record my progress of learning Git
+Record my progress of learning **Unix** and **Git**
