@@ -1,0 +1,75 @@
+cal 	#print calendar
+	cal 1999
+	cal 7 1999
+cat 	#output the context of a text file
+	cat <file.txt> #view contents
+	cat <file1.txt> >> <file2.text> #append file1 to file2
+	cat <file1.txt> <file2.txt> <file3.txt> >> <newfile.txt> #concatenate multiple files
+cd 	#change current directory
+	cd <file> #switch to a subdirectory of current directory
+	cd /Users/randou/... #switch to another directory
+	cd .. #move to the closest parent directory
+	cd / #move to root directory
+	cd #return to home directory
+	cd ~ #return to home directory
+	cd - #return to the latest directory
+chmod 	#change the permission information associated with a file
+	#permissions include: r(read), w(write), x(execute)  
+	#user categories include: u(owner/user), g(group), o(other)
+	chmod u+x <file> #allow yourself to execute a file
+	chmod o+rx <file> #allow anyone who has access to the directory to read and execute the file
+cp 	#copy a file
+  	#must have permission to read before copying
+	cp -i <oldfile> <newfile> #add i to avoid destroy the newfile if exists
+	cp -i /Users/somepath/... . #the 'period' indicates current directory
+	cp -i <oldfile> ~/somepath/newfile
+date	#dislay the current day, date, time, and year
+df	#show file system disk usage
+	df #show usage of each file system
+	df -k #also show blocks in kilobytes
+du	#show disk usage (list of file in the current work directory)
+	df -k #also show blocks in kilobytes
+find	#list all files within a directory and subdirectories match condition
+	find . -name "*.ipynb" -print #search under current wd
+	find ~/Esther/somepath -name myfile.txt -print #under other directories
+jobs	#reports any programs that you suspended and still have running or waiting in the background
+	#Each job will be listed with a number
+	%4 #resume a job
+	kill %2	#kill suspended job
+	kill -9 %2 #harsher method to kill a suspended job
+Less/more #display contents of a file one screen at a time
+	less <text.file> #display a txt file
+	ls -la | less #display result of other commands
+lpr/lp	#print a file on a printer connected to the computer network
+	lpr -Plp1 myfile
+	lp -dlp1 myfile
+ls	#list the file stored in a directory
+	ls
+	ls -a #also show 'dot' files
+	ls -la #show file permissions
+	ls -la | less
+	ls -1 #display one entry per line
+man 	#displays the manual page for a particular command
+	man ls #manual page of ls command
+	man man #learn more about man
+	man -k <keyword> #search for an unsure command
+mkdir	#make a new subdirectory under current directory
+	mkdir <new directory> #create under current directory
+	mkdir /Users/somepath/newdirectory #create under an existing directory
+	rmdir #remove a directory
+mv	#move a file/change directory location/rename
+	#ALWAY USE -i to PRESERVE the original file.
+	mv -i <oldname> <newname> #rename a file
+	mv -i subdirectory1/file subdirectory2 #move file from sub1 to sub2
+	mv -i subdirectory1/oldname subdirectory2/new name #move while rename  
+ps	   
+
+
+
+
+
+
+
+
+
+
