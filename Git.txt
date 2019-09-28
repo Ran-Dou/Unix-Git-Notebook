@@ -10,5 +10,6 @@ git add .               #add all the file in the current directory
 git add file1 file2     #add multiple files
 git commit -m "..."     #-m for adding message
 git diff                #shows file differences not yet staged
+git diff --staged       #shows file differences stagged
 
  
