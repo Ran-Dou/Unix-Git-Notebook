@@ -1,10 +1,16 @@
+Learning Sources:
+1. [web] https://kb.iu.edu/d/afsk#ls
+2. [pdf] 
+
+
+
 cal 	#print calendar
 	cal 1999
 	cal 7 1999
 cat 	#output the context of a text file
 	cat <file.txt> #view contents
 	cat <file1.txt> >> <file2.text> #append file1 to file2
-	cat <file1.txt> <file2.txt> <file3.txt> >> <newfile.txt> #concatenate multiple files
+	cat <file1.txt> <file2.txt> >> <new.txt> #concatenate multiple files
 cd 	#change current directory
 	cd <file> #switch to a subdirectory of current directory
 	cd /Users/randou/... #switch to another directory
@@ -14,10 +20,13 @@ cd 	#change current directory
 	cd ~ #return to home directory
 	cd - #return to the latest directory
 chmod 	#change the permission information associated with a file
-	#permissions include: r(read), w(write), x(execute)  
-	#user categories include: u(owner/user), g(group), o(other)
+	#permissions include: r(read4), w(write2), x(execute1)  
+	#user categories: u(owner/user), g(group), o(other), a(all three)
 	chmod u+x <file> #allow yourself to execute a file
-	chmod o+rx <file> #allow anyone who has access to the directory to read and execute the file
+	chmod o+rx <file> #allow anyone to read and execute the file
+	chmod o-wx <file> #remove write and execute permission for other
+	chmod u=rwx <file>
+	chmod -R o+x mydir #grant permission to all subdirectories
 cp 	#copy a file
   	#must have permission to read before copying
 	cp -i <oldfile> <newfile> #add i to avoid destroy the newfile if exists
@@ -47,8 +56,10 @@ ls	#list the file stored in a directory
 	ls
 	ls -a #also show 'dot' files
 	ls -la #show file permissions
-	ls -la | less
+	ls -lah | less #-h is for reducing number of digits
 	ls -1 #display one entry per line
+	ls -R #display all files in subdirectories
+	ls -F #marks special files with symbols to indicate what they are
 man 	#displays the manual page for a particular command
 	man ls #manual page of ls command
 	man man #learn more about man
@@ -62,7 +73,33 @@ mv	#move a file/change directory location/rename
 	mv -i <oldname> <newname> #rename a file
 	mv -i subdirectory1/file subdirectory2 #move file from sub1 to sub2
 	mv -i subdirectory1/oldname subdirectory2/new name #move while rename  
-ps	   
+ps	#displays information about programs (that is, processes) that are currently running
+pwd	#print current directory path
+rm	#remove/destroy a file
+	#ALWAY USE WITH -i
+	rm -i file/directory
+	rm -rf oldstuff #-r remove file hierarchy -f force remove
+	ls -R oldstuff | less #CHECK BEFORE REMOVE
+set	#display or change various settings and options associated with Unix session
+	set
+	set | less
+vi	#starts the vi test editor
+	#need to switch the program from command mode to insert mode by pressing 'i'
+	#switch back to command mode pressing `Esc`
+	#After switch back, switch to ex mod, pressing :
+	#'w' for save, 'wq' for save and quit, 'q!' For quit without saving
+w/who	#list all users logged into the computer
+	w #list of what they are doing
+	who #IP numbers or computer names of the terminals they are using
+
+
+
+
+
+
+
+
+
 
 
 
