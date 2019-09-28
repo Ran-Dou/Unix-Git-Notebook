@@ -15,4 +15,4 @@ git branch              #list of current branches
 git branch [branchname] #create new branch
 git checkout [branchname]   #Switches to the specified branch and updates the working directory
 git branch -d [branchname]  #delete a branch
- 
+git merge [branchname]      #will be merged to current (master) branch
