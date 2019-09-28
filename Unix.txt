@@ -28,6 +28,7 @@ chmod 	#change the permission information associated with a file
 	chmod o-wx <file> #remove write and execute permission for other
 	chmod u=rwx <file>
 	chmod -R o+x mydir #grant permission to all subdirectories
+clear 	#clear the terminal
 cp 	#copy a file
   	#must have permission to read before copying
 	cp -i <oldfile> <newfile> #add i to avoid destroy the newfile if exists

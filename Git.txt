@@ -65,12 +65,27 @@ git commit -m "Some Message"
 git push -u origin [newbranch]
 git checkout master
 git pull origin master
-git merge [newbranch]
+git merge [newbranch] / git rebase    #DIFFERENCE
 git push origin master
 git push origin --delete [newbranch]
 
-#Send Email from GitHub
-
+#Create Tags
+git checkout [branchname]
+git tag v1.0
+git tag -a v1.1 -m "tag for release version 1.1" #create annotated tag
+git tag                 #three ways to show a tag
+git show v1.0
+git tag -l "v1.*        #-l stands for --contains
+git push origin v1.0
+git push origin --tags  #push all tags at once
+git push --tags
+git tag -d v1.0         #delete tages if required
+git tag --delete v1.0   #delete from local
+git push origin -d v1.0 #three ways to delete from remote
+git push origin --delete v1.0
+git push origin :v1.0
+git checkout -b [branchname] [tag]  #create a branch from a tag
+git tag [tag] [reference of commit] #create a tag from past commit
 
 #Enable git command auto completion
 1. put git-completion.bash script to your home dir.
