@@ -4,19 +4,85 @@ Learning Sources:
 
 Open Terminal in Visual Studio Code: Control + Tilde Key
 
-git clone url	        #clone a repository
+#basic set ups
+git --help
+git --version
+git config --global user.name "Ran-Dou"
+git config --global user.email "randou.esther@gmail.com"
+git config --global user.name "Ran-Esther-Dou"
+git config --global user.email "randou@brandeis.edu"
+git config --list
+git help <verb>
+git verb --help
+
+#create new repository in local and push to remote
+git init                #initiate a local repository
+rm -rf .git             #remove version control from git
+touch .gitignore        #can add files we want to ignore, accept wildcard
+                        .DS_Store
+
+git clone <url>	<local place>   #clone a repository
+git remote -v           #list all remote repositories
+git branch -a           #list all branches include remote
 git add <filename>      #add file to stage
 git add .               #add all the file in the current directory
 git add file1 file2     #add multiple files
+git add -a              #add everything unstaged/untracked
+git reset               #remove files from staging area 
 git commit -m "..."     #-m for adding message
 git diff                #shows file differences not yet staged
 git diff --staged       #shows file differences stagged
 git branch              #list of current branches
 git branch [branchname] #create new branch
-git branch -d [branchname]      #delete a branch
-git checkout [branchname]       #Switches to the specified branch and updates the working directory
-git branch -d [branchname]      #delete a branch
-git checkout -b [branchname]    #create and move to new branch
+git checkout [branchname]           #Switches to the specified branch and updates the working directory
+git checkout -b [branchname]        #create and move to new branch
+git pull                            #pull all the changes in the branch you're on
+git pull origin master
+git push origin master
 git push --set-upstream origin testbranch       #push new branch to github
-git merge [branchname]      #will be merged to current (master) branch
-git pull                #pull all the changes in the branch you're on
+git push -u origin master           #push newly created master repository
+git push -u origin testbranch       #push new branch to github
+git remote add origin [https url]   #location of remote repository
+git merge [branchname]              #will be merged to current (master) branch
+
+#ways to delete branche
+$ git branch --merged                 #double checkout
+$ git push origin --delete <branch> #delete remote branch 
+$ git branch --delete <branch>      #delete local branch
+$ git branch -d <branch>            #Shorter version
+$ git branch -D <branch>            #Force delete un-merged branches
+$ git branch --delete --remotes <remote>/<branch>   #delete a local remote-tracking branch
+$ git branch -dr <remote>/<branch>  #Shorter
+$ git fetch <remote> --prune        #Delete multiple obsolete tracking branches
+$ git fetch <remote> -p #Shorter
+
+#Common Process
+git branch [newbranch]
+git checkout [newbranch]
+git status
+git add -A
+git commit -m "Some Message"
+git push -u origin [newbranch]
+git checkout master
+git pull origin master
+git merge [newbranch]
+git push origin master
+git push origin --delete [newbranch]
+
+#Send Email from GitHub
+
+
+#Enable git command auto completion
+1. put git-completion.bash script to your home dir.
+curl https://raw.githubusercontent.com/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+2. add following to .bash_profile. This tells .bash to run git-completions.bash if exists
+vi ~/.bash_profile
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+#Enable git color
+1. check if colouring is already enabled
+terminal - git config color.ui
+2. enable colouring 
+git config --global color.ui true
