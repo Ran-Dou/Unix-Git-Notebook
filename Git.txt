@@ -16,7 +16,14 @@ git help <verb>
 git verb --help
 
 #create new repository in local and push to remote
-git init                #initiate a local repository
+mkdir hibernaet-demo2
+cd hibernaet-demo2
+git init
+touch README
+git add README
+git commit -m 'first commit'
+git remote add origin git@github.com:defnngj/hibernaet-demo2.git
+git push -u origin master
 rm -rf .git             #remove version control from git
 touch .gitignore        #can add files we want to ignore, accept wildcard
                         .DS_Store
