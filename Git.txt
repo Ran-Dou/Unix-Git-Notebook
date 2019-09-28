@@ -11,5 +11,8 @@ git add file1 file2     #add multiple files
 git commit -m "..."     #-m for adding message
 git diff                #shows file differences not yet staged
 git diff --staged       #shows file differences stagged
-
+git branch              #list of current branches
+git branch [branchname] #create new branch
+git checkout [branchname]   #Switches to the specified branch and updates the working directory
+git branch -d [branchname]  #delete a branch
  
