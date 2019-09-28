@@ -1,0 +1,13 @@
+Learning Sources:
+1. [web] https://www.youtube.com/watch?v=IHaTbJPdB-s
+2.
+
+Open Terminal in Visual Studio Code: Control + Tilde Key
+
+git clone url	    #clone a repository
+git add <filename>  #add file to stage
+    git add . #add all the file in the current directory
+    git add file1 file2 #add multiple files
+git commit -m "add test file"      #-m for adding message
+
+ 
