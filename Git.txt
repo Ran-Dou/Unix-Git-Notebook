@@ -13,6 +13,7 @@ git diff                #shows file differences not yet staged
 git diff --staged       #shows file differences stagged
 git branch              #list of current branches
 git branch [branchname] #create new branch
-git checkout [branchname]   #Switches to the specified branch and updates the working directory
-git branch -d [branchname]  #delete a branch
-git checkout -b [branchname]#create and move to new branch
+git checkout [branchname]       #Switches to the specified branch and updates the working directory
+git branch -d [branchname]      #delete a branch
+git checkout -b [branchname]    #create and move to new branch
+git push --set-upstream origin testbranch       #push new branch to github
