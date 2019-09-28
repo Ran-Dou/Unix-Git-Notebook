@@ -1,6 +1,6 @@
 Learning Sources:
 1. [web] https://www.youtube.com/watch?v=IHaTbJPdB-s
-2.
+2. [book] https://www.git-scm.com/book/en/v2
 
 Open Terminal in Visual Studio Code: Control + Tilde Key
 
