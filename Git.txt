@@ -13,7 +13,7 @@ git config --global user.name "Ran-Esther-Dou"
 git config --global user.email "randou@brandeis.edu" 
 git config --list
 git help <verb>
-git verb --help
+git verb --help 
 
 #create new repository in local and push to remote
 mkdir hibernaet-demo2
